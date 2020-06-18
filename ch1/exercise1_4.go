@@ -38,7 +38,7 @@ func countLines(f *os.File, counts map[string]*dup) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
 		counts[input.Text()] = &dup{
-			Count:     1,
+			Count:     2,
 			FineNames: "aaaa",
 		}
 	}

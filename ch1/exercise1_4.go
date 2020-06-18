@@ -10,7 +10,7 @@ import (
 
 type dup struct {
 	Count     int
-	FileNames []string
+	FileNames string
 }
 
 func main() {
@@ -39,12 +39,12 @@ func countLines(f *os.File, counts map[string]*dup) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
 		c := 1
-		n := []string{f.Name()}
+		n := f.Name()
 		if _, ok := counts[input.Text()]; ok {
 			c = counts[input.Text()].Count + 1
 
 			if !strings.Contains(counts[input.Text()].FileNames, f.Name()) {
-				n = append(counts[input.Text()].FileNames, f.Name())
+				n = counts[input.Text()].FileNames + "," + f.Name()
 			}
 		}
 		counts[input.Text()] = &dup{

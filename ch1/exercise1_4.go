@@ -7,8 +7,13 @@ import (
 	"os"
 )
 
+type dup struct {
+	Count     int
+	FineNames string
+}
+
 func main() {
-	counts := make(map[string]int)
+	counts := make(map[string]*dup)
 	files := os.Args[1:]
 	if len(files) == 0 {
 		countLines(os.Stdin, counts)
@@ -23,15 +28,17 @@ func main() {
 		}
 	}
 	for line, n := range counts {
-		if n > 1 {
-			fmt.Printf("%d\t%s\n", n, line)
+		if n.Count > 1 {
+			fmt.Printf("%d\t%s\n", n.Count, line)
 		}
 	}
 }
 
-func countLines(f *os.File, counts map[string]int) {
+func countLines(f *os.File, counts map[string]*dup) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
-		counts[fmt.Sprintf("%s %s", f.Name(), input.Text())]++
+		counts[input.Text()].Count = 1
 	}
+
+	// fmt.Sprintf("%s %s", f.Name(),
 }

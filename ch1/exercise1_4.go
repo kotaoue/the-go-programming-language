@@ -1,4 +1,4 @@
-// e.g. go run dup2.go ./dup_target.txt ./dup_target2.txt
+// e.g. go run exercise1_4.go ./dup_target.txt ./dup_target2.txt ./dup_target3.txt
 package main
 
 import (
@@ -40,11 +40,14 @@ func countLines(f *os.File, counts map[string]*dup) {
 	for input.Scan() {
 		c := 1
 		n := f.Name()
+
+		fmt.Println(input.Text() + " " + n)
 		if _, ok := counts[input.Text()]; ok {
 			c = counts[input.Text()].Count + 1
 
 			if !strings.Contains(counts[input.Text()].FileNames, f.Name()) {
 				n = counts[input.Text()].FileNames + ", " + f.Name()
+				fmt.Println("dupe " + n)
 			}
 		}
 		counts[input.Text()] = &dup{

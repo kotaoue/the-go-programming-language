@@ -29,7 +29,7 @@ func main() {
 	}
 	for line, n := range counts {
 		if n.Count > 1 {
-			fmt.Printf("%d\t%s\n", n.Count, line)
+			fmt.Printf("%d\t%s\t%v\n", n.Count, line, n.FineNames)
 		}
 	}
 }

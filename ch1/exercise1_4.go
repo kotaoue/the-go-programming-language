@@ -48,6 +48,8 @@ func countLines(f *os.File, counts map[string]*dup) {
 			if !strings.Contains(counts[input.Text()].FileNames, f.Name()) {
 				n = counts[input.Text()].FileNames + ", " + f.Name()
 				fmt.Println("new " + n)
+			} else {
+				fmt.Println("old " + n)
 			}
 		}
 		counts[input.Text()] = &dup{

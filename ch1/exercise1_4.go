@@ -30,7 +30,7 @@ func main() {
 	}
 	for line, n := range counts {
 		if n.Count > 1 {
-			fmt.Printf("%d\t%s\t%v\n", n.Count, line, n.FileNames)
+			fmt.Printf("%d\t%s\t%s\n", n.Count, line, n.FileNames)
 		}
 	}
 }
@@ -41,13 +41,13 @@ func countLines(f *os.File, counts map[string]*dup) {
 		c := 1
 		n := f.Name()
 
-		fmt.Println(input.Text() + " " + n)
+		fmt.Println("search " + input.Text() + " " + n)
 		if _, ok := counts[input.Text()]; ok {
 			c = counts[input.Text()].Count + 1
 
 			if !strings.Contains(counts[input.Text()].FileNames, f.Name()) {
 				n = counts[input.Text()].FileNames + ", " + f.Name()
-				fmt.Println("dupe " + n)
+				fmt.Println("new " + n)
 			}
 		}
 		counts[input.Text()] = &dup{

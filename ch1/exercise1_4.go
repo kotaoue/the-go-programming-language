@@ -1,4 +1,3 @@
-// e.g. echo -e "a\na\nb" | go run dup2.go
 // e.g. go run dup2.go ./dup_target.txt
 package main
 
@@ -33,6 +32,6 @@ func main() {
 func countLines(f *os.File, counts map[string]int) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
-		counts[input.Text()]++
+		counts[fmt.Sprintf("%s %s\n", f.Name(), input.Text())]++
 	}
 }

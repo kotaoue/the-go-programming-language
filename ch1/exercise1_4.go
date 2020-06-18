@@ -5,6 +5,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 type dup struct {
@@ -41,7 +42,10 @@ func countLines(f *os.File, counts map[string]*dup) {
 		n := []string{f.Name()}
 		if _, ok := counts[input.Text()]; ok {
 			c = counts[input.Text()].Count + 1
-			n = append(counts[input.Text()].FileNames, f.Name())
+
+			if !strings.Contains(counts[input.Text()].FileNames, f.Name()) {
+				n = append(counts[input.Text()].FileNames, f.Name())
+			}
 		}
 		counts[input.Text()] = &dup{
 			Count:     c,

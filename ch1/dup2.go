@@ -1,4 +1,5 @@
 // e.g. echo -e "a\na\nb" | go run dup2.go
+// e.g. go run dup2.go ./dup2.txt
 package main
 
 import (

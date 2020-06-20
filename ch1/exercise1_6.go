@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-var palette = []color.Color{color.Black, color.RGBA{0x00, 0xff, 0x00, 0xff}}
+var palette = []color.Color{color.Black}
 
 const (
 	whiteIndex = 0
@@ -21,6 +21,17 @@ const (
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
+
+	for i := 0; i <= 255; i += 16 {
+		append(palette, color.RGBA{uint8(i), 0, 0, 255})
+	}
+	for i := 0; i <= 255; i += 16 {
+		append(palette, color.RGBA{0, uint8(i), 0, 255})
+	}
+	for i := 0; i <= 255; i += 16 {
+		append(palette, color.RGBA{0, 0, uint8(i), 255})
+	}
+
 	lissajous(os.Stdout)
 }
 

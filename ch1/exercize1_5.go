@@ -1,3 +1,4 @@
+// e.g. go run lissajous.go > out.gif
 package main
 
 import (

@@ -12,7 +12,7 @@ import (
 	"time"
 )
 
-var palette = []color.Color{color.Black, color.White}
+var palette = []color.Color{color.White, color.Black}
 
 const (
 	whiteIndex = 0

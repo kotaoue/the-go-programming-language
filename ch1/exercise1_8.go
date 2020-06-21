@@ -1,4 +1,4 @@
-// e.g. go run exercise1_7.go http://kota.oue.me
+// e.g. go run exercise1_8.go http://kota.oue.me
 package main
 
 import (

@@ -21,6 +21,8 @@ func main() {
 			os.Exit(1)
 		}
 
+		fmt.Fprintf(os.Stdout, "fetch: response %s; %v\n", url, resp.Status)
+
 		_, err = io.Copy(os.Stdout, resp.Body)
 		resp.Body.Close()
 		if err != nil {

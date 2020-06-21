@@ -1,3 +1,4 @@
+// e.g. go run fetch.go http://kota.oue.me
 package main
 
 import (
@@ -21,6 +22,5 @@ func main() {
 			os.Exit(1)
 		}
 		fmt.Print("%s", b)
-		}
 	}
 }

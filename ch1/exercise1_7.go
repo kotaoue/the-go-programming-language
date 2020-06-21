@@ -4,9 +4,9 @@ package main
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"os"
-	"strings"
 )
 
 func main() {
@@ -17,12 +17,12 @@ func main() {
 			os.Exit(1)
 		}
 
-		r := strings.NewReader("some io.Reader stream to be read\n")
-		_, err = io.Copy(r, resp.Body)
+		b, err := io.Copy(ioutil.Discard, resp.Body)
+		resp.Body.Close()
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: reading %s; %v\n", url, err)
 			os.Exit(1)
 		}
-		fmt.Printf("%s", r)
+		fmt.Printf("%s", b)
 	}
 }

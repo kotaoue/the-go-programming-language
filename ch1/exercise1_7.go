@@ -1,9 +1,9 @@
-// e.g. go run fetch.go http://kota.oue.me
+// e.g. go run exercise1_7.go http://kota.oue.me
 package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 )
@@ -15,8 +15,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
 			os.Exit(1)
 		}
-		b, err := ioutil.ReadAll(resp.Body)
-		resp.Body.Close()
+		_, err := io.Copy(resp, b)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: reading %s; %v\n", url, err)
 			os.Exit(1)

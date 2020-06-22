@@ -17,7 +17,7 @@ func main() {
 		go fetch(url, ch)
 	}
 	for range os.Args[1:] {
-		fmt.Println("%.2fs elapsed\n", time.Since(start).Seconds())
+		fmt.Printf("%.2fs elapsed\n", time.Since(start).Seconds())
 	}
 }
 

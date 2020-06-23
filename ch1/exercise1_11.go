@@ -1,4 +1,4 @@
-// e.g. go run exercise1_11.go http://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest;go run exercise1_10.go http://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest
+// e.g. go run exercise1_11.go http://kota.oue.me http://dummy.oue.me http://kota.oue.me
 package main
 
 import (
@@ -16,12 +16,10 @@ func main() {
 	for _, url := range os.Args[1:] {
 		go fetch(url, ch)
 	}
-
-	file, _ := os.Create(fmt.Sprintf("exercise1_10_%v.txt", time.Now().Unix()))
 	for range os.Args[1:] {
-		fmt.Fprintln(file, <-ch)
+		fmt.Println(<-ch)
 	}
-	fmt.Fprintf(file, "%.2fs elapsed\n", time.Since(start).Seconds())
+	fmt.Printf("%.2fs elapsed\n", time.Since(start).Seconds())
 }
 
 func fetch(url string, ch chan<- string) {

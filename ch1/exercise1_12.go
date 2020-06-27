@@ -32,7 +32,8 @@ func main() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	c := r.FormValue("cycles")
 	log.Printf("cycles=%v", c)
-	lissajous(w, strconv.Atoi(c))
+	i, err :+ strconv.Atoi(c)
+	lissajous(w, i)
 }
 
 func lissajous(out io.Writer, cycles int) {

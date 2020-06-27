@@ -2,6 +2,7 @@
 package main
 
 import (
+	"fmt"
 	"image"
 	"image/color"
 	"image/gif"
@@ -10,7 +11,6 @@ import (
 	"math"
 	"math/rand"
 	"net/http"
-	"os"
 	"sync"
 	"time"
 )
@@ -24,13 +24,15 @@ const (
 )
 
 func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	rand.Seed(time.Now().UTC().UnixNano())
-	lissajous(os.Stdout)
+	c := r.FormValue("cycles")
+	fmt.Printf("%v", c)
+	lissajous(w)
 }
 
 func lissajous(out io.Writer) {

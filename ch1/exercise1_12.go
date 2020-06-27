@@ -10,6 +10,7 @@ import (
 	"math"
 	"math/rand"
 	"net/http"
+	"strconv"
 	"sync"
 	"time"
 )
@@ -31,7 +32,7 @@ func main() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	c := r.FormValue("cycles")
 	log.Printf("cycles=%v", c)
-	lissajous(w, c)
+	lissajous(w, strconv.Atoi(c))
 }
 
 func lissajous(out io.Writer, cycles int) {

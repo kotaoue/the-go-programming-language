@@ -9,7 +9,6 @@ import (
 )
 
 var mu sync.Mutex
-var count int
 
 func main() {
 	http.HandleFunc("/", handler)

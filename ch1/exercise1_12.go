@@ -2,7 +2,6 @@
 package main
 
 import (
-	"fmt"
 	"image"
 	"image/color"
 	"image/gif"
@@ -31,13 +30,13 @@ func main() {
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	c := r.FormValue("cycles")
-	fmt.Printf("%v", c)
-	lissajous(w)
+	log.Printf("cycles=%v", c)
+	lissajous(w, c)
 }
 
-func lissajous(out io.Writer) {
+func lissajous(out io.Writer, c int) {
 	const (
-		cycles  = 5
+		cycles  = c
 		res     = 0.001
 		size    = 100
 		nframes = 64

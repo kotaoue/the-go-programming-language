@@ -1,5 +1,4 @@
 // e.g http://localhost:8000
-// e.g http://localhost:8000/count
 package main
 
 import (
@@ -23,8 +22,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Header[%q] = %q\n", k, v)
 	}
 	fmt.Fprintf(w, "Host = %q\n", r.Host)
-	fmt.Fprintf(w. "RemoteAddr = %q\n", r.RemoteAddr)
-	if err := r,r.ParseForm(); err != nil {
+	// fmt.Fprintf(w. "RemoteAddr = %q\n", r.RemoteAddr)
+	if err := r.ParseForm(); err != nil {
 		log.Print(err)
 	}
 	for k, v := range r.Form {

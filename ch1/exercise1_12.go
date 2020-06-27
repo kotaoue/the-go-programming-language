@@ -34,9 +34,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	lissajous(w, c)
 }
 
-func lissajous(out io.Writer, c int) {
+func lissajous(out io.Writer, cycles int) {
 	const (
-		cycles  = c
 		res     = 0.001
 		size    = 100
 		nframes = 64

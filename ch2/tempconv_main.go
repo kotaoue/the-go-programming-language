@@ -24,4 +24,7 @@ func main() {
 	fmt.Println(c2.String())
 	fmt.Printf("%v\n", c2)
 	fmt.Printf("%s\n", c2)
+	fmt.Println(c2)
+	fmt.Printf("%g\n", c2)
+	fmt.Println(float64(c2))
 }

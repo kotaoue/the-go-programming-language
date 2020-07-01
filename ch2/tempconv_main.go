@@ -20,6 +20,6 @@ func main() {
 	// fmt.Println(c == f)
 	fmt.Println(c == tempconv.Celsius(f))
 
-	C := FtoC(212.0)
-	fmt.Println(c.String())
+	c2 := tempconv.FToC(212.0)
+	fmt.Println(c2.String())
 }

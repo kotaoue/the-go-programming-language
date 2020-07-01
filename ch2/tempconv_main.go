@@ -18,5 +18,5 @@ func main() {
 	fmt.Println(c == 0)
 	fmt.Println(f >= 0)
 	// fmt.Println(c == f)
-	fmt.Println(c == temoconv.Celsius(f))
+	fmt.Println(c == tempconv.Celsius(f))
 }

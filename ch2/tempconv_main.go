@@ -22,4 +22,6 @@ func main() {
 
 	c2 := tempconv.FToC(212.0)
 	fmt.Println(c2.String())
+	fmt.Printf("%v\n", c2)
+	fmt.Printf("%s\n", c2)
 }

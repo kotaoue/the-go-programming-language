@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("%g\n", BoilingC-FreezingC)
+	fmt.Printf("%g\n", tempconv.BoilingC-tempconv.FreezingC)
 	fmt.Printf("%g\n", tempconv.CToF(BoilingC))
 }

@@ -3,6 +3,8 @@ package tempconv
 type Celsius float64
 type Fahrenheit float64
 
+import "fmt"
+
 const (
 	AbsoluteZeroC Celsius = -273.15
 	FreezingC     Celsius = 0

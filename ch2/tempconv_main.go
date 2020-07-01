@@ -14,4 +14,7 @@ func main() {
 
 	var c tempconv.Celsius
 	var f tempconv.Fahrenheit
+
+	fmt.Println(c == 0)
+	fmt.Println(f >= 0)
 }

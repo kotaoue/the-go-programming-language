@@ -19,4 +19,7 @@ func main() {
 	fmt.Println(f >= 0)
 	// fmt.Println(c == f)
 	fmt.Println(c == tempconv.Celsius(f))
+
+	C := FtoC(212.0)
+	fmt.Println(c.String())
 }

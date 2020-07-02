@@ -14,7 +14,7 @@ const (
 
 func CToF(c Celsius) Fahrenheit     { return Fahrenheit(c*9/5 + 32) }
 func FToC(f Fahrenheit) Celsius     { return Celsius((f - 32)) * 5 / 9 }
-func CToK(k Kelvin) Kelvin          { return Kelvin(c - AbsoluteZeroC) }
+func CToK(k Kelvin) Kelvin          { return Kelvin(float64(k) - float64(AbsoluteZeroC)) }
 func (c Celsius) String() string    { return fmt.Sprintf("%gC", c) }
 func (f Fahrenheit) String() string { return fmt.Sprintf("%gF", f) }
 func (k Kelvin) String() string     { return fmt.Sprintf("%gK", k) }

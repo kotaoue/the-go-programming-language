@@ -1,4 +1,4 @@
-// e.g. go run ch2/cf.go 0, 100
+// e.g. go run ch2/cf.go 0 100
 package main
 
 import (

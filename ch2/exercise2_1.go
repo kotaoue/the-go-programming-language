@@ -28,5 +28,6 @@ func main() {
 	fmt.Printf("%g\n", c2)
 	fmt.Println(float64(c2))
 
+	fmt.Printf("%g\n", tempconv.CToK(tempconv.AbsoluteZeroC))
 	fmt.Printf("%g\n", tempconv.CToK(tempconv.BoilingC))
 }

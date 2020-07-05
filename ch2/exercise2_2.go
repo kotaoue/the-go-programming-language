@@ -22,7 +22,7 @@ func main() {
 	if len(options) == 0 {
 		input := bufio.NewScanner(os.Stdin)
 		for input.Scan() {
-			append(options, input.Text())
+			options = append(options, input.Text())
 		}
 	}
 

@@ -2,6 +2,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"strconv"
@@ -19,7 +20,10 @@ func main() {
 	options := os.Args[1:]
 
 	if len(options) == 0 {
-		fmt.Println("aaa")
+		input := bufio.NewScanner(os.Stdin)
+		for input.Scan() {
+			append(options, input.Text())
+		}
 	}
 
 	for _, arg := range options {

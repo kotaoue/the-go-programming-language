@@ -13,6 +13,8 @@ type Celsius float64
 type Fahrenheit float64
 type Feet float64
 type Meter float64
+type Pound float64
+type Kilogram float64
 
 func CToF(c Celsius) Fahrenheit     { return Fahrenheit(c*9/5 + 32) }
 func FToC(f Fahrenheit) Celsius     { return Celsius((f - 32)) * 5 / 9 }
@@ -23,6 +25,11 @@ func FToM(f Feet) Meter        { return Meter(f / 3.2808) }
 func MToF(m Meter) Feet        { return Feet(m * 3.2808) }
 func (f Feet) String() string  { return fmt.Sprintf("%gft", f) }
 func (m Meter) String() string { return fmt.Sprintf("%gm", m) }
+
+func PToK(p Pound) Kilogram       { return Kilogram(p / 2.2046) }
+func KToP(k Kilogram) Pound       { return Pound(k * 2.2046) }
+func (k Kilogram) String() string { return fmt.Sprintf("%gkg", k) }
+func (p Pound) String() string    { return fmt.Sprintf("%glbs", p) }
 
 func main() {
 	options := os.Args[1:]
@@ -48,5 +55,9 @@ func main() {
 		ft := Feet(t)
 		m := Meter(t)
 		fmt.Printf("%s = %s, %s = %s\n", ft, FToM(ft), m, MToF(m))
+
+		p := Pound(t)
+		k := Kilogram(t)
+		fmt.Printf("%s = %s, %s = %s\n", p, PToK(p), k, KToP(k))
 	}
 }

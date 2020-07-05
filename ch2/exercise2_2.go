@@ -18,6 +18,10 @@ func (f Fahrenheit) String() string { return fmt.Sprintf("%g°F", f) }
 func main() {
 	options := os.Args[1:]
 
+	if len(options) == 0 {
+		fmt.Println("aaa")
+	}
+
 	for _, arg := range options {
 		t, err := strconv.ParseFloat(arg, 64)
 		if err != nil {

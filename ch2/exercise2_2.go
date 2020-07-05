@@ -45,7 +45,7 @@ func main() {
 		c := Celsius(t)
 		fmt.Printf("%s = %s, %s = %s\n", f, FToC(f), c, CToF(c))
 
-		ft := Fahrenheit(t)
+		ft := Feet(t)
 		m := Meter(t)
 		fmt.Printf("%s = %s, %s = %s\n", ft, FToM(ft), m, MToF(m))
 	}

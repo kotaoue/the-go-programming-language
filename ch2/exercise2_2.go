@@ -11,11 +11,18 @@ import (
 
 type Celsius float64
 type Fahrenheit float64
+type Feet float64
+type Meter float64
 
 func CToF(c Celsius) Fahrenheit     { return Fahrenheit(c*9/5 + 32) }
 func FToC(f Fahrenheit) Celsius     { return Celsius((f - 32)) * 5 / 9 }
 func (c Celsius) String() string    { return fmt.Sprintf("%g°C", c) }
 func (f Fahrenheit) String() string { return fmt.Sprintf("%g°F", f) }
+
+func FToM(f Feet) Meter        { return Meter(f / 3.2808) }
+func MToF(m Meter) Feet        { return Feet(m * 3.2808) }
+func (f Feet) String() string  { return fmt.Sprintf("%gft", c) }
+func (m Meter) String() string { return fmt.Sprintf("%gm", f) }
 
 func main() {
 	options := os.Args[1:]
@@ -37,5 +44,9 @@ func main() {
 		f := Fahrenheit(t)
 		c := Celsius(t)
 		fmt.Printf("%s = %s, %s = %s\n", f, FToC(f), c, CToF(c))
+
+		ft := Fahrenheit(t)
+		m := Meter(t)
+		fmt.Printf("%s = %s, %s = %s\n", ft, FToM(ft), m, MtoF(m))
 	}
 }

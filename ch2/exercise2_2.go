@@ -21,8 +21,8 @@ func (f Fahrenheit) String() string { return fmt.Sprintf("%g°F", f) }
 
 func FToM(f Feet) Meter        { return Meter(f / 3.2808) }
 func MToF(m Meter) Feet        { return Feet(m * 3.2808) }
-func (f Feet) String() string  { return fmt.Sprintf("%gft", c) }
-func (m Meter) String() string { return fmt.Sprintf("%gm", f) }
+func (f Feet) String() string  { return fmt.Sprintf("%gft", f) }
+func (m Meter) String() string { return fmt.Sprintf("%gm", m) }
 
 func main() {
 	options := os.Args[1:]
@@ -47,6 +47,6 @@ func main() {
 
 		ft := Fahrenheit(t)
 		m := Meter(t)
-		fmt.Printf("%s = %s, %s = %s\n", ft, FToM(ft), m, MtoF(m))
+		fmt.Printf("%s = %s, %s = %s\n", ft, FToM(ft), m, MToF(m))
 	}
 }

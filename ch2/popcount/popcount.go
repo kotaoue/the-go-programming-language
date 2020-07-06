@@ -1,4 +1,3 @@
-// e.g. go run echo4.go --help
 package popcount
 
 var pc [256]byte

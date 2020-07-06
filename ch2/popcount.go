@@ -1,5 +1,5 @@
 // e.g. go run echo4.go --help
-package main
+package popcount
 
 var pc [256]byte
 

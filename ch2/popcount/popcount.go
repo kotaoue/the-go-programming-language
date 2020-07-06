@@ -20,9 +20,9 @@ func PopCount(x uint64) int {
 }
 
 func PopCountLoop(x uint64) int {
-	var p int
+	var b byte
 	for i := 0; i <= 8; i++ {
-		p += pc[byte(x>>(i*8))]
+		b += pc[byte(x>>(i*8))]
 	}
-	return p
+	return int(b)
 }

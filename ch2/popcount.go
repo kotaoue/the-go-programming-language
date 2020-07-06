@@ -9,7 +9,7 @@ func init() {
 	}
 }
 
-func PopCount(x unit64) {
+func PopCount(x uint64) int {
 	return int(pc[byte(x>>(0*8))] +
 		pc[byte(x>>(1*8))] +
 		pc[byte(x>>(2*8))] +

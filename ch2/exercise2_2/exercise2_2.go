@@ -1,5 +1,5 @@
-// e.g go run ch2/exercise2_2.go 0 32
-// e.g. echo -e "0\n32" | go run ch2/exercise2_2.go
+// e.g go run exercise2_2.go 0 32
+// e.g. echo -e "0\n32" | go run exercise2_2.go
 package main
 
 import (

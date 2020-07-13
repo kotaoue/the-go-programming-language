@@ -1,4 +1,4 @@
-// e.g. go run ch2/cf.go 32 212 -40
+// e.g. go run cf.go 32 212 -40
 package main
 
 import (

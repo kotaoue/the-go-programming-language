@@ -1,4 +1,4 @@
-// e.g. go run dup3.go ./dup_target.txt
+// e.g. go run dup3.go ./../dup_target.txt
 package main
 
 import (

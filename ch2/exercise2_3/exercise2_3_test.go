@@ -1,3 +1,4 @@
+// e.g. go test -bench . -benchmem
 package main
 
 import (

@@ -1,4 +1,4 @@
-// e.g. go run exercise1_5.go > out2.gif
+// e.g. go run exercise1_5.go > out.gif
 package main
 
 import (

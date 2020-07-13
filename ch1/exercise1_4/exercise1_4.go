@@ -1,4 +1,4 @@
-// e.g. go run exercise1_4.go ./dup_target.txt ./dup_target2.txt ./dup_target3.txt
+// e.g. o run exercise1_4.go ./../dup_target.txt ./../dup_target2.txt ./../dup_target3.txt
 package main
 
 import (

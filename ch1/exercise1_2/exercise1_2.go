@@ -1,3 +1,4 @@
+// e.g go run exercise1_2.go a b c d e f g h i j k
 package main
 
 import (

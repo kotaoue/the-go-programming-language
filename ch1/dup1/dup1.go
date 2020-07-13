@@ -1,4 +1,4 @@
-// e.g. echo -e "a\na\nb" | ./dup1
+// e.g. echo -e "a\na\nb" | go run dup1.go
 package main
 
 import (

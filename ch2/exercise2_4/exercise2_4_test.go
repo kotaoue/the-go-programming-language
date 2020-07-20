@@ -18,3 +18,9 @@ func BenchmarkPopCountLoop(b *testing.B) {
 		popcount.PopCountLoop(uint64(i))
 	}
 }
+
+func BenchmarkPopCountBitShift(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		popcount.PopCountBitShift(uint64(i))
+	}
+}

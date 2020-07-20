@@ -28,9 +28,9 @@ func PopCountLoop(x uint64) int {
 }
 
 func PopCountBitShift(x uint64) int {
-	var b byte
+	var c int
 	for i := 0; i < 64; i++ {
-		b = pc[byte(x>>(1))]
+		c += int(x >> (i) & 1)
 	}
-	return int(b)
+	return c
 }

@@ -34,3 +34,12 @@ func PopCountBitShift(x uint64) int {
 	}
 	return c
 }
+
+func PopCountBitClear(x uint64) int {
+	var c int
+	for x > 0 {
+		x &= (x - uint64(1))
+		c++
+	}
+	return c
+}

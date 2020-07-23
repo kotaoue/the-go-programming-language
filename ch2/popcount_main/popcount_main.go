@@ -11,6 +11,7 @@ func main() {
 		r1 := popcount.PopCount(uint64(i))
 		r2 := popcount.PopCountLoop(uint64(i))
 		r3 := popcount.PopCountBitShift(uint64(i))
-		fmt.Printf("%d %d %d %d\n", i, r1, r2, r3)
+		r4 := popcount.PopCountBitClear(uint64(i))
+		fmt.Printf("%d %d %d %d %d\n", i, r1, r2, r3, r4)
 	}
 }

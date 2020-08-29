@@ -56,6 +56,7 @@ func p61_1() {
 }
 
 func p61_2() {
+	fmt.Println("--P61_2--")
 	var apples int32 = 1
 	var oranges int16 = 2
 	var compote = int(apples) + int(oranges)

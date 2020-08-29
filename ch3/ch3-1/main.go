@@ -4,7 +4,19 @@ import "fmt"
 
 func main() {
 	p59()
+	p60()
+}
 
+func p59() {
+	fmt.Println("--P59--")
+	var u uint8 = 255
+	fmt.Println(u, u+1, u*u)
+
+	var i int8 = 127
+	fmt.Println(1, 1+1, i*i)
+}
+
+func p60() {
 	fmt.Println("--P60--")
 	var x uint8 = 1 << 1
 	fmt.Printf("%08b\n", x)
@@ -28,13 +40,4 @@ func main() {
 
 	fmt.Printf("%08b\n", x<<1)
 	fmt.Printf("%08b\n", x>>1)
-}
-
-func p59() {
-	fmt.Println("--P59--")
-	var u uint8 = 255
-	fmt.Println(u, u+1, u*u)
-
-	var i int8 = 127
-	fmt.Println(1, 1+1, i*i)
 }

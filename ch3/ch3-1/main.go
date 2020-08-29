@@ -58,7 +58,7 @@ func p61_1() {
 func p61_2() {
 	var apples int32 = 1
 	var oranges int16 = 2
-	var compote int = int(apples) + int(oranges)
+	var compote = int(apples) + int(oranges)
 
 	fmt.Printf("%d (%s)\n", apples, reflect.TypeOf(apples))
 	fmt.Printf("%d (%s)\n", oranges, reflect.TypeOf(oranges))

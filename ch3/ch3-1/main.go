@@ -24,4 +24,10 @@ func main() {
 	fmt.Printf("%08b\n", x^y)
 	fmt.Printf("%08b\n", x&^y)
 	fmt.Printf("%08b\n", ^(x | y))
+
+	for i := uint(0); i < 8; i++ {
+		if x&(1<<i) != 0 {
+			fmt.Println(i)
+		}
+	}
 }

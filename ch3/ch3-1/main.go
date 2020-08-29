@@ -10,6 +10,7 @@ func main() {
 	p60()
 	p61_1()
 	p61_2()
+	p61_3()
 }
 
 func p59() {
@@ -67,4 +68,14 @@ func p61_2() {
 
 	var compote2 = int16(apples) + oranges
 	fmt.Printf("%d (%s)\n", compote2, reflect.TypeOf(compote2))
+}
+
+func p61_3() {
+	fmt.Println("--P61_3--")
+	f := 3.141
+	i := int(f)
+
+	fmt.Println(f, i)
+	f = 1.99
+	fmt.Println(i)
 }

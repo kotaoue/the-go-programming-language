@@ -11,6 +11,7 @@ func main() {
 	p61_1()
 	p61_2()
 	p61_3()
+	p62_1()
 }
 
 func p59() {
@@ -78,4 +79,10 @@ func p61_3() {
 	fmt.Println(f, i)
 	f = 1.99
 	fmt.Println(i)
+}
+
+func p62_1() {
+	fmt.Println("--P62_1--")
+	o := 0666
+	fmt.Printf("%d %[1]o %#[1]o\n", o)
 }

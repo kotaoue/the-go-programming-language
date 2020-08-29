@@ -12,6 +12,7 @@ func main() {
 	p61_2()
 	p61_3()
 	p62_1()
+	p62_2()
 }
 
 func p59() {
@@ -88,4 +89,14 @@ func p62_1() {
 
 	x := int64(0xdeadbeef)
 	fmt.Printf("%d %[1]x %#[1]x %#[1]X\n", x)
+}
+
+func p62_2() {
+	fmt.Println("--P62_2--")
+	ascii := 'a'
+	unicode := '国'
+	newline := '\n'
+	fmt.Printf("%d %[1]c %[1]q\n", ascii)
+	fmt.Printf("%d %[1]c %[1]q\n", unicode)
+	fmt.Printf("%d %[1]q\n", newline)
 }

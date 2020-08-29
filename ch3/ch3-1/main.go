@@ -63,4 +63,7 @@ func p61_2() {
 	fmt.Printf("%d (%s)\n", apples, reflect.TypeOf(apples))
 	fmt.Printf("%d (%s)\n", oranges, reflect.TypeOf(oranges))
 	fmt.Printf("%d (%s)\n", compote, reflect.TypeOf(compote))
+
+	var compote2 = int16(apples) + oranges
+	fmt.Printf("%d (%s)\n", compote2, reflect.TypeOf(compote2))
 }

@@ -23,4 +23,5 @@ func main() {
 	fmt.Printf("%08b\n", x|y)
 	fmt.Printf("%08b\n", x^y)
 	fmt.Printf("%08b\n", x&^y)
+	fmt.Printf("%08b\n", ^(x | y))
 }

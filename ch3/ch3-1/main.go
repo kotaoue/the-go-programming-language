@@ -30,4 +30,7 @@ func main() {
 			fmt.Println(i)
 		}
 	}
+
+	fmt.Printf("%08b\n", x<<1)
+	fmt.Printf("%08b\n", x>>1)
 }

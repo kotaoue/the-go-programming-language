@@ -13,6 +13,6 @@ func main() {
 	// p60
 	var x uint8 = 1 << 1
 	fmt.Printf("%08b\n", x)
-	x = 1<<1 | 1<<5
+	x = x | 1<<5
 	fmt.Printf("%08b\n", x)
 }

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func main() {
@@ -59,7 +60,7 @@ func p61_2() {
 	var oranges int16 = 2
 	var compote int = int(apples) + int(oranges)
 
-	fmt.Println(apples)
-	fmt.Println(oranges)
-	fmt.Println(compote)
+	fmt.Printf("%d (%s)\n", apples, reflect.TypeOf(apples))
+	fmt.Printf("%d (%s)\n", oranges, reflect.TypeOf(oranges))
+	fmt.Printf("%d (%s)\n", compote, reflect.TypeOf(compote))
 }

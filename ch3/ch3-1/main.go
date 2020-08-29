@@ -9,4 +9,8 @@ func main() {
 
 	var i int8 = 127
 	fmt.Println(1, 1+1, i*i)
+
+	// p60
+	var x uint8 = 1 << 1
+	fmt.Printf("%08b\n", x)
 }

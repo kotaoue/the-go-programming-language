@@ -1,11 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	p59()
 	p60()
 	p61_1()
+	p61_2()
 }
 
 func p59() {
@@ -49,4 +52,14 @@ func p61_1() {
 	for i := len(medals) - 1; i >= 0; i-- {
 		fmt.Println(medals[i])
 	}
+}
+
+func p61_2() {
+	var apples int32 = 1
+	var oranges int16 = 2
+	var compote int = int(apples) + int(oranges)
+
+	fmt.Println(apples)
+	fmt.Println(oranges)
+	fmt.Println(compote)
 }

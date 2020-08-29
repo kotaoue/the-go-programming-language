@@ -15,4 +15,7 @@ func main() {
 	fmt.Printf("%08b\n", x)
 	x |= 1 << 5
 	fmt.Printf("%08b\n", x)
+
+	var y uint8 = 1<<1 | 1<<2
+	fmt.Printf("%08b\n", y)
 }

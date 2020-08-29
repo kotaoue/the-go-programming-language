@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	p59()
 	p60()
+	p61()
 }
 
 func p59() {
@@ -40,4 +41,12 @@ func p60() {
 
 	fmt.Printf("%08b\n", x<<1)
 	fmt.Printf("%08b\n", x>>1)
+}
+
+func p61() {
+	fmt.Println("--P61--")
+	medals := []string{"gold", "silver", "bronze"}
+	for i := len(medals) - 1; i >= 0; i-- {
+		fmt.Println(medals[i])
+	}
 }

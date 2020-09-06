@@ -20,6 +20,7 @@ func main() {
 	p63_4()
 	p63_5()
 	p64_1()
+	p64_2()
 }
 
 func p63_1() {
@@ -58,4 +59,9 @@ func p63_5() {
 func p64_1() {
 	var z float64
 	fmt.Println(z, -z, 1/z, -1/z, z/z)
+}
+
+func p64_2() {
+	nan := math.NaN()
+	fmt.Println(nan, nan == nan, nan < nan, nan > nan)
 }

@@ -19,6 +19,7 @@ func main() {
 	p63_3()
 	p63_4()
 	p63_5()
+	p64_1()
 }
 
 func p63_1() {
@@ -52,4 +53,9 @@ func p63_5() {
 	for x := 0; x < 8; x++ {
 		fmt.Printf("x = %d E^ = %8.3f\n", x, math.Exp(float64(x)))
 	}
+}
+
+func p64_1() {
+	var z float64
+	fmt.Println(z, -z, 1/z, -1/z, z/z)
 }

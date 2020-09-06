@@ -1,3 +1,5 @@
+// $go run ch3/surface/main.go > ch3/surface/surface.svg
+// $ open -a '/Applications/Google Chrome.app' ch3/surface/surface.svg
 package main
 
 import (
@@ -18,7 +20,7 @@ var sin30, cos30 = math.Sin(angle), math.Cos(angle)
 
 func main() {
 	fmt.Printf("<svg xmlns='http://www.w3.org/2000/svg' "+
-		"style='storoke: gray; fill: white; stroke-width; 0.7' "+
+		"style='stroke: gray; fill: white; stroke-width; 0.7' "+
 		"width='%d' height='%d'>", width, height)
 	for i := 0; i < cells; i++ {
 		for j := 0; j < cells; j++ {

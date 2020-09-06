@@ -18,6 +18,7 @@ func main() {
 	p63_2()
 	p63_3()
 	p63_4()
+	p63_5()
 }
 
 func p63_1() {
@@ -45,4 +46,10 @@ func p63_4() {
 	fmt.Printf("%t\n", Avogadro >= Planck)
 	fmt.Printf("%t\n", Avogadro == Planck)
 	fmt.Printf("%t\n", Avogadro <= Planck)
+}
+
+func p63_5() {
+	for x := 0; x < 8; x++ {
+		fmt.Printf("x = %d E^ = %8.3f\n", x, math.Exp(float64(x)))
+	}
 }

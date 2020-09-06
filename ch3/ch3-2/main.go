@@ -15,7 +15,12 @@ func p63_1() {
 	fmt.Printf("%g\n", math.MaxFloat64)
 }
 func p63_2() {
-	var f float32 = 16777216
-	fmt.Printf("%g\n", f)
-	fmt.Printf("%t\n", f == f+1)
+	var f32 float32 = 16777216
+	fmt.Printf("%g\n", f32)
+	fmt.Printf("%t\n", f32 == f32+1)
+
+	var f64 float64 = 16777216
+	fmt.Printf("%g\n", f64)
+	fmt.Printf("%t\n", f64 == f64+1)
+
 }

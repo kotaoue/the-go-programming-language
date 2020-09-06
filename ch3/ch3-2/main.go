@@ -10,6 +10,6 @@ func main() {
 }
 
 func p63_1() {
-	fmt.Printf("%g", math.MaxFloat32)
-	fmt.Printf("%g", math.MaxFloat64)
+	fmt.Printf("%g\n", math.MaxFloat32)
+	fmt.Printf("%g\n", math.MaxFloat64)
 }

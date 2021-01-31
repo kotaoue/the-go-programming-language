@@ -60,5 +60,5 @@ func corner(i, j int) (float64, float64) {
 
 func f(x, y float64) float64 {
 	r := math.Hypot(x, y)
-	return math.Sin(r) / r
+	return math.Sqrt(r) / r
 }

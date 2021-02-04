@@ -1,6 +1,5 @@
 // $ go run ch3/exercise3_4/main.go
 // $ open -a '/Applications/Google Chrome.app' http://localhost:8000
-
 package main
 
 import (

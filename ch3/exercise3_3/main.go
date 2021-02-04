@@ -82,10 +82,10 @@ func f(x, y float64) float64 {
 func fill(az, bz, cz, dz float64) (c string) {
 	z := (az + bz + cz + dz) / 4
 
-	if z >= 0.955 {
+	if z >= 0.9 {
 		// 0.9557691306147335
 		c = "#ff0000"
-	} else if z <= -0.214 {
+	} else if z <= -0.2 {
 		// -0.2147958119649517
 		c = "#0000ff"
 	}

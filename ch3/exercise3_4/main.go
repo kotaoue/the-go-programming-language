@@ -26,6 +26,8 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "image/svg+xml")
+
 	fmt.Fprintf(w, "<svg xmlns='http://www.w3.org/2000/svg' "+
 		"style='stroke: gray; fill: white; stroke-width; 0.7' "+
 		"width='%d' height='%d'>", width, height)

@@ -48,7 +48,7 @@ func main() {
 		}
 	}
 	// fmt.Println(zmax) = 0.9557691306147335
-	// fmt.Println(zmin) = -0.2147958119649517
+	// fmt.Println(zmin) =
 	fmt.Println("</svg>")
 
 }
@@ -82,9 +82,11 @@ func f(x, y float64) float64 {
 func fill(az, bz, cz, dz float64) (c string) {
 	z := (az + bz + cz + dz) / 4
 
-	if z >= 1.0 {
+	if z >= 0.955 {
+		// 0.9557691306147335
 		c = "#ff0000"
-	} else if z == 0.0 {
+	} else if z <= -0.214 {
+		// -0.2147958119649517
 		c = "#0000ff"
 	}
 	return

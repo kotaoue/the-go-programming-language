@@ -1,5 +1,4 @@
-// $ go run ch3/ch3-3/mandelbrot.go > ch3/ch3-3/result.png
-// $ open -a '/Applications/Google Chrome.app' ch3/ch3-3/result.png
+// $ go run ch3/ch3-3/mandelbrot.go > ch3/ch3-3/result.png;open -a '/Applications/Google Chrome.app' ch3/ch3-3/result.png
 package main
 
 import (
@@ -16,8 +15,8 @@ func main() {
 		ymin   = -2
 		xmax   = 2
 		ymax   = 2
-		width  = 1024
-		height = 1024
+		width  = 640
+		height = 640
 	)
 
 	img := image.NewRGBA(image.Rect(0, 0, width, height))

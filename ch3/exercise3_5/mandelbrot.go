@@ -26,14 +26,14 @@ func main() {
 			x := float64(px)/width*(xmax-xmin) + xmin
 			z := complex(x, y)
 
-			img.Set(px, py, mandelbrot(x, y, z))
+			img.Set(px, py, mandelbrot(z))
 		}
 	}
 
 	png.Encode(os.Stdout, img)
 }
 
-func mandelbrot(x, y float64, z complex128) color.RGBA {
+func mandelbrot(z complex128) color.RGBA {
 	const (
 		iterations = 200
 		contrast   = 15

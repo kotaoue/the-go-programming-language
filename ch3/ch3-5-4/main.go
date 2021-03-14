@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -18,6 +19,18 @@ func main() {
 	{
 		i := "abc"
 		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename(i))
+	}
+	{
+		i := "a/b/c.go"
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename2(i))
+	}
+	{
+		i := "c.d.go"
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename2(i))
+	}
+	{
+		i := "abc"
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename2(i))
 	}
 }
 
@@ -34,6 +47,15 @@ func basename(s string) string {
 			s = s[i+1:]
 			break
 		}
+	}
+	return s
+}
+
+func basename2(s string) string {
+	slash := strings.LastIndex(s, "/")
+	s = s[slash+1:]
+	if dot := strings.LastIndex(s, "."); dot >= 0 {
+		s = s[:dot]
 	}
 	return s
 }

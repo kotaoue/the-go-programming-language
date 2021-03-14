@@ -9,7 +9,7 @@ import (
 func main() {
 	{
 		i := "a/b/c.go"
-		fmt.Fprintf(os.Stdout, "%s\n", i)
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename(i))
 	}
 }
 

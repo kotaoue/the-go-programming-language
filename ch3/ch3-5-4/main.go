@@ -11,6 +11,14 @@ func main() {
 		i := "a/b/c.go"
 		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename(i))
 	}
+	{
+		i := "c.d.go"
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename(i))
+	}
+	{
+		i := "abc"
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename(i))
+	}
 }
 
 func basename(s string) string {

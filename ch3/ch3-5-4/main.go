@@ -32,7 +32,6 @@ func main() {
 		i := "abc"
 		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename2(i))
 	}
-
 	{
 		i := "12345"
 		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, comma(i))

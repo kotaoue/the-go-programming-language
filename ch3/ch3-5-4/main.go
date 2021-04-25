@@ -32,6 +32,11 @@ func main() {
 		i := "abc"
 		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, basename2(i))
 	}
+
+	{
+		i := "12345"
+		fmt.Fprintf(os.Stdout, "%s\t->\t%s\n", i, comma(i))
+	}
 }
 
 func basename(s string) string {
@@ -58,4 +63,12 @@ func basename2(s string) string {
 		s = s[:dot]
 	}
 	return s
+}
+
+func comma(s string) string {
+	n := len(s)
+	if n <= 3 {
+		return s
+	}
+	return comma(s[:n-3]) + "," + s[n-3:]
 }
